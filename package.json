@@ -1,6 +1,6 @@
 {
   "name": "junior-astronaut-mission-trainer",
-  "packageManager": "pnpm",
+  "packageManager": "pnpm@11.25.0",
   "private": true,
   "version": "0.0.0",
   "type": "module",
