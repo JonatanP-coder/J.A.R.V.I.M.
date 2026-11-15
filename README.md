@@ -2,7 +2,7 @@
 
 Simulador espacial educativo en español e inglés. Diseña una nave en un hangar 3D, comprueba si tiene suficiente potencia y soporte vital, y toma decisiones durante el vuelo. Puedes abrir las referencias de la NASA desde la misma pantalla para investigar la tecnología real que inspiró cada pieza.
 
-[Bitácora de desarrollo](./Bitácora_de_desarrllo.md)
+
 
 ## Ejecutar en tu equipo
 
