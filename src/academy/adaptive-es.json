@@ -1,0 +1,308 @@
+{
+  "Balance energético": {
+    "junior": {
+      "principiante": "¡Mira las alas solares! Si tus aparatos piden más luz de la que los paneles convierten en electricidad, apaga uno.",
+      "intermedio": "Cuenta los vatios como fichas. Con 50 W de los paneles y 40 W en uso, sobran 10 W.",
+      "avanzado": "¡Juega a ajustar el margen! Calcula P = generación − consumo en vatios. Si P baja de cero, cambia una pieza y vuelve a medir."
+    },
+    "cadete": {
+      "principiante": "Imagina una regleta conectada a un panel solar. ¿Podría alimentar todos tus instrumentos a la vez?",
+      "intermedio": "Predice el efecto de encender un sensor de 20 W. El balance baja 20 W aunque los paneles sigan dando lo mismo.",
+      "avanzado": "Compara dos cargas útiles. Maximiza su valor científico con P_generada − P_consumida ≥ 0 y comprueba en telemetría cuál deja más margen."
+    },
+    "ingeniero": {
+      "principiante": "Compare la electricidad disponible con la que requiere el equipo, como al conectar aparatos a un generador.",
+      "intermedio": "Reste el consumo total a la generación solar en vatios. Un balance negativo requiere reducir la carga o aumentar la generación.",
+      "avanzado": "Evalúe el margen del bus ΔP = P_fotovoltaica − ΣP_cargas. Contraste configuraciones bajo la restricción ΔP ≥ 0 antes de autorizar la carga útil."
+    }
+  },
+  "Masa": {
+    "junior": {
+      "principiante": "Cantidad de materia que llevas contigo. Imagina tu nave como una mochila: cada pieza que guardas añade masa.",
+      "intermedio": "Suma los kilogramos como si pesaras tu mochila. Si cambias una pieza de 30 kg por otra de 20 kg, ahorras 10 kg.",
+      "avanzado": "¡Prueba el límite! Suma m = Σm_piezas. Con 1500 kg todavía puedes elegir motor; por encima, el simulador exige uno pesado."
+    },
+    "cadete": {
+      "principiante": "Piensa en empujar dos carros de compra. El más cargado cuesta más acelerar porque tiene mayor masa.",
+      "intermedio": "Registra la masa en kg antes y después de cambiar un panel. La diferencia debe coincidir con la de las dos piezas.",
+      "avanzado": "Investiga la aceleración con a = F_neta/m. Compara diseños de igual fuerza y comprueba el umbral de motor pesado al superar 1500 kg."
+    },
+    "ingeniero": {
+      "principiante": "Cantidad de materia de un objeto. Se mide en kilogramos. Como en un inventario de equipaje, cada elemento se suma al total.",
+      "intermedio": "Calcule la masa total sumando los kilogramos del inventario. El peso, en cambio, es una fuerza que depende de la gravedad.",
+      "avanzado": "Use m_total = Σm_i y W = m_total g. Verifique la selección de propulsión si m_total > 1500 kg y compare el coste de reducir masa."
+    }
+  },
+  "Soporte vital": {
+    "junior": {
+      "principiante": "¡Tu nave también es una casa! El soporte vital cuida el aire para que tu tripulación pueda respirar.",
+      "intermedio": "Lee el indicador de oxígeno como una botella marcada. Si marca 75 % y necesitas 65 %, tienes diez puntos de sobra.",
+      "avanzado": "¡Vigila dos pistas! Calcula el margen O₂_actual − O₂_mínimo y comprueba que el equipo que da aire también tenga electricidad."
+    },
+    "cadete": {
+      "principiante": "Piensa en la nave como una habitación cerrada. El soporte vital mantiene respirable su interior.",
+      "intermedio": "Compara la reserva de oxígeno con el mínimo del destino. Usa puntos porcentuales para expresar la diferencia.",
+      "avanzado": "Contrasta dos sistemas con O₂ ≥ O₂_mín y balance eléctrico ≥ 0. ¿Qué opción aumenta la reserva sin agotar el margen de potencia?"
+    },
+    "ingeniero": {
+      "principiante": "El soporte vital mantiene habitable la cabina, como la ventilación y climatización de un edificio cerrado.",
+      "intermedio": "Revise el porcentaje de oxígeno disponible y el mínimo de misión. La alimentación eléctrica del sistema cuenta como consumo.",
+      "avanzado": "Verifique simultáneamente ΔO₂ = O₂_disponible − O₂_requerido ≥ 0 y la demanda del bus. El índice de reserva del simulador no mide presión parcial."
+    }
+  },
+  "Telemetría": {
+    "junior": {
+      "principiante": "¡Son las noticias de tu nave! Sus instrumentos cuentan desde lejos cómo va el viaje.",
+      "intermedio": "Lee dos mensajes del mismo instrumento. Si la altura pasa de 3 a 5 km, has subido 2 km.",
+      "avanzado": "¡Busca una tendencia! Calcula Δh/Δt con dos lecturas de altura y tiempo. Esa es tu velocidad vertical media."
+    },
+    "cadete": {
+      "principiante": "Imagina seguir el viaje mediante mensajes de sus sensores. Esas mediciones a distancia son telemetría.",
+      "intermedio": "Anota variable, unidad y momento de cada lectura. Compara dos momentos para detectar un cambio.",
+      "avanzado": "Estima una tasa con Δx/Δt. Investiga si una lectura aislada coincide con la tendencia antes de ordenar una maniobra."
+    },
+    "ingeniero": {
+      "principiante": "La telemetría comunica mediciones a distancia, como un tablero de control consultado desde otra sala.",
+      "intermedio": "Identifique el parámetro, su unidad y la hora de adquisición. Una muestra informa del estado en ese instante.",
+      "avanzado": "Estime derivadas mediante diferencias finitas Δx/Δt. Considere intervalo de muestreo, resolución y latencia al interpretar una anomalía."
+    }
+  },
+  "Propulsión": {
+    "junior": {
+      "principiante": "Imagina un globo que suelta aire y sale disparado. El motor también expulsa material para empujar la nave.",
+      "intermedio": "Dibuja una flecha hacia donde sale el gas y otra al revés. La segunda marca hacia dónde empuja el motor.",
+      "avanzado": "¡Haz una predicción! Con la misma masa, más fuerza neta da más aceleración: a = F_neta/m."
+    },
+    "cadete": {
+      "principiante": "Piensa en saltar desde una tabla flotante. Al empujarla hacia atrás, tú te mueves hacia delante.",
+      "intermedio": "Compara motores por su empuje en newtons. A igual masa y fuerzas externas, más empuje cambia la velocidad más rápido.",
+      "avanzado": "Explora la relación empuje/peso T/(mg). ¿Qué motor aumenta esa relación al contar también la masa del propio motor?"
+    },
+    "ingeniero": {
+      "principiante": "La propulsión permite cambiar el movimiento de la nave expulsando material, de forma parecida a un chorro de agua.",
+      "intermedio": "Relacione la fuerza del motor en N con la masa de la nave en kg. Revise el efecto de cambiar ambas al sustituir el motor.",
+      "avanzado": "Compare T/(mg) e impulso específico. Optimice la selección de motor considerando la masa instalada y el perfil de aceleración previsto."
+    }
+  },
+  "Radiación": {
+    "junior": {
+      "principiante": "La radiación viaja por el espacio como luz o pequeñas partículas. Tu nave puede dar refugio a la tripulación.",
+      "intermedio": "Piensa en el tiempo que dura una tormenta. Si recibes la misma radiación cada minuto, más minutos significan más exposición.",
+      "avanzado": "¡Planea el refugio! Si la tasa es constante, dosis = tasa × tiempo. Reducir el tiempo expuesto baja la dosis."
+    },
+    "cadete": {
+      "principiante": "Una tormenta solar puede enviar partículas hacia la nave. Investiga dónde encontraría protección la tripulación.",
+      "intermedio": "Relaciona tiempo y tasa de dosis. A igual tasa, duplicar el tiempo duplica la dosis acumulada.",
+      "avanzado": "Estima D = Σ(tasa × intervalo) en una tormenta cambiante. Distingue dosis de radiación y temperatura exterior."
+    },
+    "ingeniero": {
+      "principiante": "La radiación transporta energía. Algunas formas pueden dañar equipos y tejidos, por lo que la tripulación requiere protección.",
+      "intermedio": "Estime la exposición a partir de la tasa y la duración. Compare el efecto de acortar la actividad exterior.",
+      "avanzado": "Integre la tasa de dosis D = ∫Ḋ dt. El indicador de blindaje del simulador no equivale a una dosis absorbida en gray."
+    }
+  },
+  "Órbita": {
+    "junior": {
+      "principiante": "Imagina lanzar una pelota tan lejos que, mientras cae, el suelo se curva bajo ella. ¡Así puedes rodear un mundo!",
+      "intermedio": "Sigue la nave con el dedo. La gravedad curva su camino mientras sigue avanzando hacia un lado.",
+      "avanzado": "¡Compara dos círculos! Para el mismo planeta, v = √(GM/r): cuanto mayor es el radio orbital, menor es la velocidad circular."
+    },
+    "cadete": {
+      "principiante": "Una órbita es una caída continua alrededor de un cuerpo. ¿Qué pasa si cambias la velocidad lateral?",
+      "intermedio": "Compara el punto más cercano con el más lejano. En una órbita elíptica la velocidad cambia durante el recorrido.",
+      "avanzado": "Investiga la velocidad circular con v² = μ/r. Usa distancia al centro del cuerpo, no altura sobre su superficie."
+    },
+    "ingeniero": {
+      "principiante": "Una órbita es la trayectoria de una nave bajo la gravedad de otro cuerpo, como la Luna alrededor de la Tierra.",
+      "intermedio": "Compare altitudes mínima y máxima para describir la forma del recorrido. La gravedad mantiene curvada la trayectoria.",
+      "avanzado": "En el modelo de dos cuerpos use v² = μ(2/r − 1/a). Compruebe las unidades de r y del semieje mayor a."
+    }
+  },
+  "TPS": {
+    "junior": {
+      "principiante": "Es el abrigo de la nave frente al calor de la entrada.",
+      "intermedio": "Compara el escudo con una manopla de cocina. El material retrasa el paso del calor hacia dentro.",
+      "avanzado": "¡Compara escudos! Calcula el margen de protección respecto al mínimo y cuenta los kilos que añade cada uno."
+    },
+    "cadete": {
+      "principiante": "El sistema de protección térmica protege la nave al entrar en la atmósfera, cuando su exterior se calienta.",
+      "intermedio": "Investiga cómo el aislamiento limita el flujo de calor. Un escudo más pesado también cambia la masa del vehículo.",
+      "avanzado": "Contrasta el flujo térmico en W/m² con la energía acumulada por área en J/m². La duración de la entrada cuenta."
+    },
+    "ingeniero": {
+      "principiante": "El TPS protege la estructura del calentamiento exterior como una barrera aislante.",
+      "intermedio": "Revise el nivel de protección requerido para el destino y compárelo con el disponible antes de aprobar el diseño.",
+      "avanzado": "Evalúe la carga térmica integrada Q/A = ∫q dt junto con la masa del TPS. Distinga ese análisis del índice de protección didáctico."
+    }
+  },
+  "FRR": {
+    "junior": {
+      "principiante": "Es la revisión antes del gran viaje. Como al preparar tu mochila, comprueba que llevas lo necesario.",
+      "intermedio": "Haz de inspector: compara el número de cada indicador con su límite antes de pulsar despegue.",
+      "avanzado": "¡Busca la regla que falla! Aunque cuatro indicadores pasen, uno fuera de límite basta para detener el despegue."
+    },
+    "cadete": {
+      "principiante": "La revisión de vuelo es el momento de defender tu diseño con los indicadores del hangar.",
+      "intermedio": "Compara masa, potencia y reservas con sus límites. Corrige una variable y vuelve a evaluar.",
+      "avanzado": "Prueba el caso límite de 1500 kg con motor medio y un diseño apenas más pesado. Explica ambos dictámenes."
+    },
+    "ingeniero": {
+      "principiante": "La revisión de preparación determina si el diseño cumple las condiciones de lanzamiento del simulador.",
+      "intermedio": "Documente cada requisito y la lectura que lo respalda, incluidos presupuesto y reserva de oxígeno.",
+      "avanzado": "Valide la conjunción de restricciones: potencia neta ≥ 0, reservas sobre los mínimos, presupuesto dentro del techo y motor compatible con la masa."
+    }
+  },
+  "NRHO": {
+    "junior": {
+      "principiante": "Es una ruta especial alrededor de la Luna. En una parte te acercas y en otra te alejas mucho.",
+      "intermedio": "Sigue la ruta lunar y compara las dos distancias de la consola: la más cercana y la más lejana.",
+      "avanzado": "¡Apunta la nave! En esta maniobra el cabeceo tiene un objetivo de −20°. Compara el ángulo actual con ese valor."
+    },
+    "cadete": {
+      "principiante": "Explora una órbita de halo casi rectilínea. Su recorrido lleva a la nave cerca y lejos de la Luna.",
+      "intermedio": "Contrasta perilunio y apolunio. Usa la telemetría de captura para observar el efecto del impulso.",
+      "avanzado": "Investiga la tolerancia angular de captura comparando abs(θ − θ_objetivo) con el margen mostrado en la consola."
+    },
+    "ingeniero": {
+      "principiante": "Una NRHO es una órbita de halo casi rectilínea en el entorno gravitatorio Tierra-Luna.",
+      "intermedio": "Supervise las distancias de máxima y mínima aproximación lunar durante la inserción simulada.",
+      "avanzado": "Analice la captura con el error de cabeceo Δθ y los objetivos de perilunio y apolunio. La dinámica real de una NRHO incluye la influencia terrestre."
+    }
+  },
+  "Rover": {
+    "junior": {
+      "principiante": "¡Es tu robot explorador con ruedas! Conduce hasta una roca para recoger una muestra.",
+      "intermedio": "Lee los metros hasta la baliza. Si el número baja mientras ruedas, te estás acercando.",
+      "avanzado": "¡Busca una ruta corta y segura! Compara distancia, velocidad e integridad antes de girar hacia la baliza."
+    },
+    "cadete": {
+      "principiante": "Conduce este laboratorio con ruedas hacia una muestra y observa cómo responde al terreno.",
+      "intermedio": "Estima el tiempo de recorrido a partir de distancia y velocidad. Usa metros y metros por segundo.",
+      "avanzado": "Predice t = d/v en terreno libre y compara con tu tiempo real. Explica las pérdidas por maniobras y obstáculos."
+    },
+    "ingeniero": {
+      "principiante": "El rover es un vehículo robótico de superficie que transporta instrumentos hasta los puntos de muestreo.",
+      "intermedio": "Revise rumbo, velocidad y distancia a la baliza. Una distancia creciente puede indicar un rumbo incorrecto.",
+      "avanzado": "Optimice el recorrido sujeto a integridad del chasis y objetivos de muestreo. Compare la tasa de cierre −Δd/Δt entre maniobras."
+    }
+  },
+  "Empuje": {
+    "junior": {
+      "principiante": "Es el empujón que da el motor a tu nave, como al salir de un patinete con el pie.",
+      "intermedio": "Compara dos motores en newtons. El que marca más newtons puede dar un empujón mayor.",
+      "avanzado": "¡Compara fuerzas! En un ascenso vertical ideal, calcula F_neta = T − mg para ver si aceleras hacia arriba."
+    },
+    "cadete": {
+      "principiante": "El empuje es la fuerza del motor. Busca en la consola el momento en que empieza a actuar.",
+      "intermedio": "La fuerza de empuje se mide en newtons. Relaciona su dirección con el cambio de velocidad.",
+      "avanzado": "Predice la aceleración vertical mediante a = (T − D)/m − g. Explica cómo la resistencia modifica tu predicción."
+    },
+    "ingeniero": {
+      "principiante": "El empuje es la fuerza generada por el sistema de propulsión, como la de un chorro que impulsa una embarcación.",
+      "intermedio": "Compare el empuje disponible con el peso para evaluar el ascenso vertical inicial.",
+      "avanzado": "Evalúe TWR = T/(mg) con masa instantánea y revise el margen de aceleración al incluir resistencia aerodinámica."
+    }
+  },
+  "power.deficit": {
+    "junior": {
+      "principiante": "¡A tu nave le falta electricidad! Los paneles atrapan luz como hojas. Prueba a encender menos aparatos.",
+      "intermedio": "¡Cuenta los vatios! Resta lo que gastas a lo que dan tus paneles. ¿Qué pieza podrías cambiar para que alcance?",
+      "avanzado": "¡Alerta, piloto! La potencia neta es negativa. Ajusta paneles o carga útil hasta que generación − consumo ≥ 0 W."
+    },
+    "cadete": {
+      "principiante": "Imagina una sala con demasiados aparatos encendidos. ¿Qué instrumento podrías desconectar para recuperar electricidad?",
+      "intermedio": "El reto es cubrir el déficit en vatios. Predice cuánto debería generar el siguiente panel y comprueba tu cálculo.",
+      "avanzado": "Determina ΔP = P_gen − ΣP_cargas. Busca el cambio de menor masa que haga ΔP ≥ 0 y conserva el objetivo científico."
+    },
+    "ingeniero": {
+      "principiante": "El equipo consume más electricidad de la que suministran los paneles. Reduzca el consumo o cambie los paneles antes del despegue.",
+      "intermedio": "Calcule el déficit en vatios. Compare el ahorro de sustituir un instrumento con el aumento de generación de otro panel.",
+      "avanzado": "Déficit de potencia en el bus. Verifique ΔP = P_fotovoltaica − ΣP_cargas y dimensione el margen sobre el umbral ΔP ≥ 0 W."
+    }
+  },
+  "event.solar-storm": {
+    "junior": {
+      "principiante": "¡Llega una tormenta del Sol! Imagina que haces una cabaña dentro de la nave. ¿Dónde pondrías más material entre tú y las partículas?",
+      "intermedio": "¡Prepara tu refugio! Compara cuánto escudo y cuánta electricidad te quedarán al escoger cada opción.",
+      "avanzado": "¡Calcula como piloto! Si la tasa de dosis es constante, D = tasa × tiempo. ¿Qué maniobra protege a la tripulación con la energía que tienes?"
+    },
+    "cadete": {
+      "principiante": "El Sol ha enviado partículas hacia tu ruta. Tienes dos maniobras posibles. ¿Cuál protege mejor a tu equipo?",
+      "intermedio": "Predice qué decisión conservará más blindaje. Después contrasta tu predicción con las lecturas de escudo y potencia.",
+      "avanzado": "Compara la exposición D = Σ(tasa × intervalo) en un episodio de intensidad variable. Usa la telemetría de recursos para valorar el coste de protegerse."
+    },
+    "ingeniero": {
+      "principiante": "Se aproxima una tormenta solar. Elija cómo proteger a la tripulación y revise la electricidad disponible.",
+      "intermedio": "Compare la reserva de protección que dejaría cada maniobra. Compruebe que haya potencia para mantener el soporte vital.",
+      "avanzado": "Priorice reducir la dosis integrada D = ∫Ḋ dt. Evalúe el margen eléctrico tras la maniobra. El indicador de escudo representa protección relativa."
+    }
+  },
+  "event.micrometeoroids": {
+    "junior": {
+      "principiante": "¡Hay polvo veloz en el camino! Puedes hacerte a un lado o dejar que la protección de la nave reciba el golpe. ¿Qué eliges?",
+      "intermedio": "¡Lee tus indicadores! Un giro usa electricidad. Compara los puntos de escudo que perderías con cada opción.",
+      "avanzado": "¡Haz tu pronóstico! Escudo final = escudo actual + cambio de la maniobra. ¿Qué ruta deja más protección sin agotar la electricidad?"
+    },
+    "cadete": {
+      "principiante": "Partículas pequeñas cruzan tu ruta. ¿Cambias la trayectoria o confías en la protección de la nave?",
+      "intermedio": "Compara el coste de desviar la nave con el de recibir el impacto. Calcula la diferencia en puntos de escudo.",
+      "avanzado": "Predice el estado tras cada opción con S_final = S_inicial + ΔS. Contrasta blindaje restante y margen de potencia antes de ordenar la maniobra."
+    },
+    "ingeniero": {
+      "principiante": "Se aproxima una nube de partículas. Elija entre apartar la nave y utilizar la protección disponible.",
+      "intermedio": "Compare el escudo restante y el gasto eléctrico que muestra cada alternativa. El desplazamiento consume recursos.",
+      "avanzado": "Evalúe ambas alternativas bajo la restricción S_final ≥ S_mín. Considere también el margen eléctrico que conserva la maniobra."
+    }
+  },
+  "event.oxygen-regulator": {
+    "junior": {
+      "principiante": "¡Revisemos el aire de tu cabina! Como cuando cambias a una botella de reserva, tienes otra forma de seguir respirando. Elige cómo recuperar aire.",
+      "intermedio": "Sigue el indicador de aire. Si una opción añade cinco puntos a una reserva de sesenta, tendrás sesenta y cinco.",
+      "avanzado": "¡Lleva dos cuentas a la vez! Calcula O₂_final = O₂_actual + ΔO₂ y mira los vatios que necesita cada opción."
+    },
+    "cadete": {
+      "principiante": "El suministro de aire necesita un ajuste. ¿Usarías la reserva o gastarías electricidad en recuperar aire?",
+      "intermedio": "Predice la reserva de oxígeno tras cada acción sumando su cambio al indicador actual. ¿Cuánta electricidad te quedaría?",
+      "avanzado": "Compara los márgenes O₂_final − O₂_mín y P_final para ambas maniobras. ¿Cuál corrige la anomalía con menor coste eléctrico?"
+    },
+    "ingeniero": {
+      "principiante": "El regulador de oxígeno requiere atención. Elija entre ajustar la reserva y utilizar el sistema de recuperación.",
+      "intermedio": "Compare el cambio previsto en la reserva de oxígeno y el consumo eléctrico de cada procedimiento.",
+      "avanzado": "Evalúe las dos acciones con O₂_final ≥ O₂_mín y P_final ≥ 0. Verifique en telemetría cuánto margen deja cada procedimiento."
+    }
+  },
+  "event.signal-loss": {
+    "junior": {
+      "principiante": "¡La Tierra ya no oye tu nave! Como al buscar una emisora, puedes intentar encontrar la señal o esperar ahorrando electricidad.",
+      "intermedio": "¡Lee el medidor! Compara cuántos vatios quedan si vuelves a apuntar la antena o si esperas otra estación.",
+      "avanzado": "¡Dale tiempo a la señal! Calcula t = distancia / velocidad de la luz para un trayecto. Compara el gasto de recuperar el enlace con el de esperar."
+    },
+    "cadete": {
+      "principiante": "La señal de la Tierra se perdió. ¿Usarías energía para buscarla ahora o esperarías otra antena?",
+      "intermedio": "Distingue perder la señal de recibir una respuesta tarde. Compara la potencia necesaria para volver a apuntar con la de esperar.",
+      "avanzado": "Estima el tiempo de ida y vuelta t = 2d/c, sin contar el procesamiento. ¿Qué opción conserva el enlace sin comprometer el margen eléctrico?"
+    },
+    "ingeniero": {
+      "principiante": "Se ha perdido el enlace con Tierra. Elija entre recuperar la orientación de la antena o esperar con menor consumo.",
+      "intermedio": "Compare el coste eléctrico de la adquisición de señal con el modo de espera. Considere el tiempo de propagación de la señal.",
+      "avanzado": "Separe la pérdida de enlace del retardo de propagación t = d/c. Compare el margen eléctrico después de la adquisición y en espera."
+    }
+  },
+  "event.gravity-assist": {
+    "junior": {
+      "principiante": "¡Apareció una ocasión para explorar! Puedes tomar un desvío cerca de un planeta o seguir por la ruta prevista. Mira qué necesitará tu nave.",
+      "intermedio": "¡Traza un giro! La gravedad del planeta curva la ruta. Compara la reserva que conservas con cada alternativa.",
+      "avanzado": "¡Predice la salida! Dibuja las flechas de velocidad antes y después del encuentro. Calcula el cambio Δv = v_salida − v_entrada como diferencia de vectores."
+    },
+    "cadete": {
+      "principiante": "Un sobrevuelo abre otra oportunidad científica. ¿Qué recurso gastarías para cambiar el recorrido?",
+      "intermedio": "Dibuja la trayectoria cerca del planeta. Su gravedad cambia la dirección del movimiento. Compara el coste de apuntar la nave.",
+      "avanzado": "Compara las velocidades de entrada y salida respecto al planeta y al Sol. ¿En qué sistema de referencia cambia la rapidez con una asistencia ideal?"
+    },
+    "ingeniero": {
+      "principiante": "Hay una oportunidad de observación en una trayectoria alternativa. Revise el coste de la maniobra antes de modificar la ruta.",
+      "intermedio": "Una asistencia gravitatoria desvía la trayectoria cerca del planeta. Compare las reservas previstas con el beneficio de la observación.",
+      "avanzado": "En un sobrevuelo ideal, |v∞_entrada| = |v∞_salida| en el marco del planeta. Evalúe el cambio de velocidad heliocéntrica y el coste de orientar la nave."
+    }
+  }
+}

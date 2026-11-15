@@ -1,0 +1,308 @@
+{
+  "Balance energético": {
+    "junior": {
+      "principiante": "Look at the solar wings! If your devices need more electricity than the panels can make from sunlight, switch one off.",
+      "intermedio": "Count watts like tokens. With 50 W from the panels and 40 W in use, you have 10 W to spare.",
+      "avanzado": "Try tuning the margin! Calculate P = generation − demand in watts. If P drops below zero, swap a part and measure again."
+    },
+    "cadete": {
+      "principiante": "Picture a power strip connected to a solar panel. Could it power all your instruments at once?",
+      "intermedio": "Predict what happens when you switch on a 20 W sensor. The balance falls by 20 W even if panel output stays constant.",
+      "avanzado": "Compare two payloads. Maximize their science value subject to P_generated − P_used ≥ 0 and check their headroom in telemetry."
+    },
+    "ingeniero": {
+      "principiante": "Compare available electricity with equipment demand, as when connecting appliances to a generator.",
+      "intermedio": "Subtract total consumption from solar generation in watts. A negative balance requires shedding load or increasing generation.",
+      "avanzado": "Evaluate bus headroom ΔP = P_photovoltaic − ΣP_loads. Compare configurations subject to ΔP ≥ 0 before authorizing the payload."
+    }
+  },
+  "Masa": {
+    "junior": {
+      "principiante": "The amount of matter you take along. Picture your ship as a backpack: each part you pack adds mass.",
+      "intermedio": "Add kilograms as if weighing your backpack. Swap a 30 kg part for a 20 kg part and you save 10 kg.",
+      "avanzado": "Try the limit! Add m = Σm_parts. At 1500 kg you can still choose your engine; above it the simulator requires a heavy one."
+    },
+    "cadete": {
+      "principiante": "Imagine pushing two shopping carts. The fuller one is harder to accelerate because it has more mass.",
+      "intermedio": "Record mass in kg before and after swapping a panel. The difference should match the difference between the parts.",
+      "avanzado": "Investigate acceleration with a = F_net/m. Compare designs at equal force and check the heavy-engine threshold above 1500 kg."
+    },
+    "ingeniero": {
+      "principiante": "The amount of matter in an object, measured in kilograms. As in a baggage inventory, each item adds to the total.",
+      "intermedio": "Calculate total mass by adding the inventory in kilograms. Weight is a force that depends on gravity.",
+      "avanzado": "Use m_total = Σm_i and W = m_total g. Verify propulsion selection if m_total > 1500 kg and compare the cost of reducing mass."
+    }
+  },
+  "Soporte vital": {
+    "junior": {
+      "principiante": "Your ship is a home too! Life support looks after the air your crew breathes.",
+      "intermedio": "Read the oxygen gauge like a marked bottle. If it reads 75% and you need 65%, you have ten points to spare.",
+      "avanzado": "Track two clues! Calculate the margin O₂_now − O₂_minimum and check that the air supply also has power."
+    },
+    "cadete": {
+      "principiante": "Think of the ship as a closed room. Life support keeps the air inside breathable.",
+      "intermedio": "Compare oxygen reserve with the destination minimum. Express the difference in percentage points.",
+      "avanzado": "Compare two systems subject to O₂ ≥ O₂_min and net power ≥ 0. Which increases reserves without exhausting power headroom?"
+    },
+    "ingeniero": {
+      "principiante": "Life support maintains a habitable cabin, like ventilation and climate control in an enclosed building.",
+      "intermedio": "Check available oxygen percentage and the mission minimum. The system's electrical supply counts as consumption.",
+      "avanzado": "Verify both ΔO₂ = O₂_available − O₂_required ≥ 0 and bus demand. The simulator reserve index does not measure partial pressure."
+    }
+  },
+  "Telemetría": {
+    "junior": {
+      "principiante": "News from your ship! Its instruments tell you from far away how the journey is going.",
+      "intermedio": "Read two messages from the same instrument. If altitude goes from 3 to 5 km, you climbed 2 km.",
+      "avanzado": "Spot a trend! Calculate Δh/Δt from two altitude and time readings. That is your average vertical speed."
+    },
+    "cadete": {
+      "principiante": "Imagine following the trip through messages from its sensors. Those remote measurements are telemetry.",
+      "intermedio": "Record the variable, unit and time of each reading. Compare two moments to detect a change.",
+      "avanzado": "Estimate a rate with Δx/Δt. Investigate whether a single reading fits the trend before commanding a maneuver."
+    },
+    "ingeniero": {
+      "principiante": "Telemetry communicates remote measurements, like a control panel viewed from another room.",
+      "intermedio": "Identify the parameter, its unit and acquisition time. A sample describes the state at that instant.",
+      "avanzado": "Estimate derivatives using finite differences Δx/Δt. Consider sampling interval, resolution and latency when interpreting an anomaly."
+    }
+  },
+  "Propulsión": {
+    "junior": {
+      "principiante": "Picture a balloon releasing air and shooting forward. The engine also ejects material to push the ship.",
+      "intermedio": "Draw an arrow for the escaping gas and another pointing back. The second shows the direction of engine thrust.",
+      "avanzado": "Make a prediction! At the same mass, greater net force gives more acceleration: a = F_net/m."
+    },
+    "cadete": {
+      "principiante": "Imagine jumping from a floating board. As you push it backward, you move forward.",
+      "intermedio": "Compare engines by thrust in newtons. At equal mass and external forces, more thrust changes speed faster.",
+      "avanzado": "Explore thrust-to-weight ratio T/(mg). Which engine increases it once you include the mass of the engine itself?"
+    },
+    "ingeniero": {
+      "principiante": "Propulsion changes spacecraft motion by ejecting material, much like a jet of water.",
+      "intermedio": "Relate engine force in N to vehicle mass in kg. Check how both change when replacing an engine.",
+      "avanzado": "Compare T/(mg) and specific impulse. Optimize engine selection against installed mass and the predicted acceleration profile."
+    }
+  },
+  "Radiación": {
+    "junior": {
+      "principiante": "Radiation travels through space as light or tiny particles. Your ship can shelter the crew.",
+      "intermedio": "Think about how long a storm lasts. If radiation arrives at the same rate each minute, more minutes mean more exposure.",
+      "avanzado": "Plan your shelter! At a constant rate, dose = rate × time. Spending less time exposed reduces dose."
+    },
+    "cadete": {
+      "principiante": "A solar storm can send particles toward the ship. Explore where the crew could find shelter.",
+      "intermedio": "Relate exposure time and dose rate. At a fixed rate, doubling the time doubles the accumulated dose.",
+      "avanzado": "Estimate D = Σ(rate × interval) during a changing storm. Distinguish radiation dose from exterior temperature."
+    },
+    "ingeniero": {
+      "principiante": "Radiation transports energy. Some forms can damage equipment and tissue, so crews require protection.",
+      "intermedio": "Estimate exposure from rate and duration. Compare the effect of shortening an exterior activity.",
+      "avanzado": "Integrate dose rate D = ∫Ḋ dt. The simulator shielding indicator is not an absorbed dose in gray."
+    }
+  },
+  "Órbita": {
+    "junior": {
+      "principiante": "Imagine throwing a ball so far that the ground curves away as it falls. That is how you can circle a world!",
+      "intermedio": "Trace the ship with your finger. Gravity bends its path while it keeps moving sideways.",
+      "avanzado": "Compare two circles! Around the same planet, v = √(GM/r): the larger the orbital radius, the lower the circular speed."
+    },
+    "cadete": {
+      "principiante": "An orbit is a continuous fall around a body. What happens if you change sideways speed?",
+      "intermedio": "Compare the nearest and farthest points. In an elliptical orbit speed changes along the path.",
+      "avanzado": "Investigate circular speed with v² = μ/r. Use distance from the body's center rather than altitude above its surface."
+    },
+    "ingeniero": {
+      "principiante": "An orbit is a spacecraft trajectory under gravity from another body, like the Moon around Earth.",
+      "intermedio": "Compare minimum and maximum altitudes to describe the path. Gravity keeps the trajectory curved.",
+      "avanzado": "In the two-body model use v² = μ(2/r − 1/a). Check the units of r and semimajor axis a."
+    }
+  },
+  "TPS": {
+    "junior": {
+      "principiante": "It is the ship's coat against the heat of entry.",
+      "intermedio": "Compare the shield to an oven mitt. Its material slows heat transfer inward.",
+      "avanzado": "Compare shields! Calculate protection headroom over the minimum and count the kilograms each adds."
+    },
+    "cadete": {
+      "principiante": "The thermal protection system protects the ship during atmospheric entry as its exterior heats up.",
+      "intermedio": "Explore how insulation limits heat flow. A heavier shield also changes vehicle mass.",
+      "avanzado": "Contrast heat flux in W/m² with accumulated energy per area in J/m². Entry duration matters."
+    },
+    "ingeniero": {
+      "principiante": "The TPS protects the structure from external heating like an insulating barrier.",
+      "intermedio": "Review the required protection for the destination and compare it with the available level before approval.",
+      "avanzado": "Evaluate integrated heat load Q/A = ∫q dt together with TPS mass. Distinguish this analysis from the educational protection index."
+    }
+  },
+  "FRR": {
+    "junior": {
+      "principiante": "This is the check before your big trip. Like packing your bag, check that you have what you need.",
+      "intermedio": "Be the inspector: compare each gauge reading with its limit before pressing launch.",
+      "avanzado": "Find the failing rule! Even if four indicators pass, one outside its limit is enough to stop launch."
+    },
+    "cadete": {
+      "principiante": "The flight review is your chance to defend your design with the hangar readings.",
+      "intermedio": "Compare mass, power and reserves with their limits. Change one variable and reassess.",
+      "avanzado": "Test the boundary case of 1500 kg with a medium engine and a design just above it. Explain both verdicts."
+    },
+    "ingeniero": {
+      "principiante": "The readiness review determines whether the design meets the simulator's launch conditions.",
+      "intermedio": "Document each requirement and its supporting reading, including budget and oxygen reserve.",
+      "avanzado": "Validate the joint constraints: net power ≥ 0, reserves at or above minima, cost within budget and engine compatible with mass."
+    }
+  },
+  "NRHO": {
+    "junior": {
+      "principiante": "It is a special route around the Moon. On one part you come close and on another you travel far away.",
+      "intermedio": "Follow the lunar path and compare the console's two distances: the nearest and the farthest.",
+      "avanzado": "Aim your ship! In this maneuver the target pitch is −20°. Compare your current angle with that value."
+    },
+    "cadete": {
+      "principiante": "Explore a near-rectilinear halo orbit. Its path takes the spacecraft close to and far from the Moon.",
+      "intermedio": "Compare perilune and apolune. Use capture telemetry to observe the effect of thrust.",
+      "avanzado": "Investigate the capture angle tolerance by comparing abs(θ − θ_target) with the console margin."
+    },
+    "ingeniero": {
+      "principiante": "An NRHO is a near-rectilinear halo orbit in the Earth–Moon gravitational environment.",
+      "intermedio": "Monitor the farthest and nearest lunar approach distances during the simulated insertion.",
+      "avanzado": "Analyze capture using pitch error Δθ and perilune and apolune targets. Actual NRHO dynamics include Earth's influence."
+    }
+  },
+  "Rover": {
+    "junior": {
+      "principiante": "It is your explorer robot on wheels! Drive to a rock to collect a sample.",
+      "intermedio": "Read the meters to the beacon. If the number falls as you drive, you are getting closer.",
+      "avanzado": "Find a short, safe route! Compare distance, speed and hull integrity before turning toward the beacon."
+    },
+    "cadete": {
+      "principiante": "Drive this wheeled laboratory toward a sample and observe how it responds to the terrain.",
+      "intermedio": "Estimate travel time from distance and speed. Use meters and meters per second.",
+      "avanzado": "Predict t = d/v on clear terrain and compare with your actual time. Explain delays from turns and obstacles."
+    },
+    "ingeniero": {
+      "principiante": "A rover is a robotic surface vehicle that carries instruments to sampling sites.",
+      "intermedio": "Check heading, speed and range to the beacon. Increasing range may indicate an incorrect heading.",
+      "avanzado": "Optimize the route subject to chassis integrity and sampling goals. Compare closing rate −Δd/Δt across maneuvers."
+    }
+  },
+  "Empuje": {
+    "junior": {
+      "principiante": "It is the push the engine gives your ship, like pushing off on a scooter.",
+      "intermedio": "Compare two engines in newtons. The one with more newtons can give a bigger push.",
+      "avanzado": "Compare forces! In ideal vertical ascent, calculate F_net = T − mg to see whether you accelerate upward."
+    },
+    "cadete": {
+      "principiante": "Thrust is engine force. Look for the moment it begins acting on the console.",
+      "intermedio": "Thrust is measured in newtons. Relate its direction to the change in velocity.",
+      "avanzado": "Predict vertical acceleration with a = (T − D)/m − g. Explain how drag changes your prediction."
+    },
+    "ingeniero": {
+      "principiante": "Thrust is force generated by propulsion, like a jet driving a boat.",
+      "intermedio": "Compare available thrust with weight to assess initial vertical ascent.",
+      "avanzado": "Evaluate TWR = T/(mg) at instantaneous mass and check acceleration headroom when including aerodynamic drag."
+    }
+  },
+  "power.deficit": {
+    "junior": {
+      "principiante": "Your ship needs more electricity! The panels catch light like leaves. Try turning on fewer devices.",
+      "intermedio": "Count the watts! Subtract what you use from what the panels supply. Which part could you swap to make it enough?",
+      "avanzado": "Alert, pilot! Net power is negative. Adjust panels or payload until generation − demand ≥ 0 W."
+    },
+    "cadete": {
+      "principiante": "Imagine a room with too many devices switched on. Which instrument could you disconnect to recover power?",
+      "intermedio": "Your challenge is to cover the deficit in watts. Predict what the next panel must supply and check your calculation.",
+      "avanzado": "Determine ΔP = P_gen − ΣP_loads. Find the lowest-mass change that makes ΔP ≥ 0 while meeting the science objective."
+    },
+    "ingeniero": {
+      "principiante": "Equipment uses more electricity than the panels supply. Reduce demand or change panels before launch.",
+      "intermedio": "Calculate the deficit in watts. Compare savings from replacing an instrument with the added output of another panel.",
+      "avanzado": "Electrical bus power deficit. Verify ΔP = P_photovoltaic − ΣP_loads and size the headroom above the ΔP ≥ 0 W threshold."
+    }
+  },
+  "event.solar-storm": {
+    "junior": {
+      "principiante": "A storm from the Sun is coming! Imagine building a den inside your ship. Where would you put material between yourself and the particles?",
+      "intermedio": "Prepare your shelter! Compare the shielding and electricity you would have left after each choice.",
+      "avanzado": "Calculate like a pilot! At a constant dose rate, D = rate × time. Which maneuver protects the crew with the power you have?"
+    },
+    "cadete": {
+      "principiante": "Solar particles are heading toward your route. Which of the two maneuvers would best protect your team?",
+      "intermedio": "Predict which decision will preserve more shielding. Check your prediction against the shield and power readings.",
+      "avanzado": "Compare exposure D = Σ(rate × interval) in a varying storm. Use the resource readings to assess the cost of sheltering."
+    },
+    "ingeniero": {
+      "principiante": "A solar storm is approaching. Choose how to protect the crew and check the available electricity.",
+      "intermedio": "Compare the remaining protection after each maneuver. Check that enough power is available for life support.",
+      "avanzado": "Prioritize reducing integrated dose D = ∫Ḋ dt. Assess the electrical margin after the maneuver. The shield indicator represents relative protection."
+    }
+  },
+  "event.micrometeoroids": {
+    "junior": {
+      "principiante": "Fast dust is crossing your path! You can steer aside or let the ship’s shield take the hit. What will you choose?",
+      "intermedio": "Read your gauges! A turn uses electricity. Compare the shield points you would lose with each choice.",
+      "avanzado": "Make a prediction! Final shield = current shield + maneuver change. Which route leaves more protection without using up your power?"
+    },
+    "cadete": {
+      "principiante": "Small particles cross your route. Will you change course or rely on the ship’s shielding?",
+      "intermedio": "Compare the cost of steering away with the cost of taking the impact. Calculate the difference in shield points.",
+      "avanzado": "Predict each outcome with S_final = S_initial + ΔS. Compare remaining shielding and power margin before commanding the maneuver."
+    },
+    "ingeniero": {
+      "principiante": "A particle cloud is approaching. Choose between diverting the spacecraft and using its shielding.",
+      "intermedio": "Compare remaining shielding and electrical cost for each option. Changing course uses resources.",
+      "avanzado": "Evaluate both options under the constraint S_final ≥ S_min. Include the power margin left after the maneuver."
+    }
+  },
+  "event.oxygen-regulator": {
+    "junior": {
+      "principiante": "Let’s check the air in your cabin! Like switching to a spare bottle, you have another way to keep breathing. Choose how to recover air.",
+      "intermedio": "Watch the air gauge. If one choice adds five points to a reserve of sixty, you will have sixty-five.",
+      "avanzado": "Keep two tallies! Calculate O₂_final = O₂_current + ΔO₂ and check how many watts each choice needs."
+    },
+    "cadete": {
+      "principiante": "The air supply needs an adjustment. Would you switch to the reserve or use electricity to recover air?",
+      "intermedio": "Predict the oxygen reserve after each action by adding its change to the current reading. How much power would remain?",
+      "avanzado": "Compare the margins O₂_final − O₂_min and P_final for both maneuvers. Which corrects the anomaly at the lower electrical cost?"
+    },
+    "ingeniero": {
+      "principiante": "The oxygen regulator needs attention. Choose between adjusting the reserve and running the recovery system.",
+      "intermedio": "Compare the expected change in the oxygen reserve and the electrical demand of each procedure.",
+      "avanzado": "Evaluate both actions against O₂_final ≥ O₂_min and P_final ≥ 0. Check the margin each procedure leaves in telemetry."
+    }
+  },
+  "event.signal-loss": {
+    "junior": {
+      "principiante": "Earth can’t hear your ship! Like tuning a radio, you can try to find the signal again or wait and save electricity.",
+      "intermedio": "Read your gauge! Compare how many watts remain if you point the antenna again or wait for another station.",
+      "avanzado": "Give the signal time! Calculate t = distance / speed of light for a one-way trip. Compare the power costs of searching and waiting."
+    },
+    "cadete": {
+      "principiante": "The signal from Earth is lost. Would you use power to find it now or wait for another antenna?",
+      "intermedio": "Tell a lost signal apart from a delayed reply. Compare the power needed to point the antenna again with the power needed to wait.",
+      "avanzado": "Estimate round-trip time t = 2d/c, ignoring processing time. Which choice preserves the link without compromising the power margin?"
+    },
+    "ingeniero": {
+      "principiante": "The Earth link is lost. Choose between reacquiring antenna pointing and waiting at reduced power.",
+      "intermedio": "Compare the electrical cost of reacquiring the signal with standby mode. Account for signal propagation time.",
+      "avanzado": "Distinguish link loss from propagation delay t = d/c. Compare the power margins after acquisition and in standby."
+    }
+  },
+  "event.gravity-assist": {
+    "junior": {
+      "principiante": "A chance to explore! Take a detour near a planet or stay on your planned route. Look at what your ship will need.",
+      "intermedio": "Plot a turn! The planet’s gravity bends your path. Compare the reserve you keep with each choice.",
+      "avanzado": "Predict your way out! Draw velocity arrows before and after the encounter. Find Δv = v_out − v_in as a vector difference."
+    },
+    "cadete": {
+      "principiante": "A flyby opens a new science opportunity. Which resource would you spend to change the route?",
+      "intermedio": "Sketch the path near the planet. Its gravity changes the direction of motion. Compare the cost of pointing the ship.",
+      "avanzado": "Compare entry and exit velocities relative to the planet and to the Sun. In which frame does speed change in an ideal gravity assist?"
+    },
+    "ingeniero": {
+      "principiante": "An alternate trajectory offers an observation opportunity. Review the maneuver cost before changing course.",
+      "intermedio": "A gravity assist deflects the trajectory near a planet. Compare projected reserves with the observation benefit.",
+      "avanzado": "In an ideal flyby, |v∞_in| = |v∞_out| in the planet’s frame. Evaluate the heliocentric velocity change and the cost of pointing the spacecraft."
+    }
+  }
+}
